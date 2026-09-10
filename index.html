@@ -1,0 +1,852 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Berlya Arzetty 💗</title>
+
+    <!-- FONT -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Fredoka:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <!-- ==================================================
+         DEKORASI
+    =================================================== -->
+
+    <div class="decoration flower flower-1">🌸</div>
+
+    <div class="decoration flower flower-2">🌷</div>
+
+    <div class="decoration butterfly butterfly-1">🦋</div>
+
+    <div class="decoration butterfly butterfly-2">🦋</div>
+
+    <div class="decoration heart heart-1">💕</div>
+
+    <div class="decoration heart heart-2">💗</div>
+
+    <div class="decoration sparkle sparkle-1">✨</div>
+
+    <div class="decoration sparkle sparkle-2">✨</div>
+
+    <!-- ==================================================
+         HALAMAN PASSWORD
+    =================================================== -->
+
+    <section id="passwordPage" class="page password-page">
+      <div class="password-card">
+        <!-- BUBU DUDU -->
+
+        <div class="character-area">
+          <div class="character-glow"></div>
+
+          <img
+            src="assets/images/characters/bubu-dudu-birthday.png"
+            alt="Bubu dan Dudu"
+            class="bubu-dudu"
+          />
+        </div>
+
+        <!-- TEKS KECIL -->
+
+        <p class="top-label">SEBUAH KEJUTAN KECIL UNTUK BABY 💗</p>
+
+        <!-- JUDUL -->
+
+        <h1>
+          Hai, Sayangkoo!
+          <span>💕</span>
+        </h1>
+
+        <!-- DESKRIPSI -->
+
+        <p class="description">
+          Aku punya sesuatu untuk sayanggg...
+
+          <br />
+
+          Tapi sebelumnya,
+          <strong>aku harus memastikan ini baby.</strong>
+        </p>
+
+        <!-- PASSWORD -->
+
+        <div class="password-box" id="passwordBox">
+          <span class="lock"> 🔐 </span>
+
+          <input
+            type="password"
+            id="birthdayInput"
+            inputmode="numeric"
+            maxlength="8"
+            autocomplete="off"
+            placeholder="••••••••"
+            aria-label="Tanggal lahir"
+          />
+
+          <span id="togglePassword" class="eye"> 👁️ </span>
+        </div>
+
+        <!-- PETUNJUK -->
+
+        <p class="hint">Masukkan 8 angka tanggal lahir baby</p>
+
+        <!-- PESAN ERROR -->
+
+        <p id="errorMessage" class="error-message"></p>
+
+        <!-- FOOTER -->
+
+        <p class="footer">dibuat dengan penuh kasih sayang ♡</p>
+      </div>
+    </section>
+
+    <!-- ==================================================
+         HALAMAN SETELAH PASSWORD
+    =================================================== -->
+
+    <section id="welcomePage" class="page welcome-page hidden">
+      <div class="welcome-content">
+        <img
+          src="assets/images/characters/bubu-dudu-birthday.png"
+          alt="Bubu dan Dudu"
+          class="welcome-character"
+        />
+
+        <p class="welcome-label">SELAMAT DATANG, CINTAKUU 💗</p>
+
+        <h2>Baby berhasil masuk! 🥰</h2>
+
+        <p class="welcome-text">
+          Selamat ulang tahun untuk pacarku yang paling cantik.
+
+          <br /><br />
+
+          Aku udah siapin perjalanan kecil yang penuh kenangan untuk bebe. 💕
+        </p>
+
+        <div class="tap-text">✨ sebentar lagi... ✨</div>
+      </div>
+    </section>
+
+    <!-- ==================================================
+     GAME XOX
+================================================== -->
+
+    <section id="gamePage" class="game-screen hidden">
+      <div class="game-box">
+        <div class="mini-game-icon">💗</div>
+
+        <p class="game-step">GAME 1 DARI 3</p>
+
+        <h2>XOX untuk Sayang 💕</h2>
+
+        <p>Kalahin aku dulu sayang, baru bole lanjut 🤭</p>
+
+        <div id="xoxBoard" class="xox-board"></div>
+
+        <p id="xoxStatus" class="game-status">Baby duluan 💗</p>
+      </div>
+    </section>
+
+    <!-- ==================================================
+     MEMORY HEWAN
+================================================== -->
+
+    <section id="memoryGame" class="game-screen hidden">
+      <div class="game-box">
+        <div class="mini-game-icon animal-bounce">🐶</div>
+
+        <p class="game-step">GAME 2 DARI 3</p>
+
+        <h2>Cari Pasangannya baby! 🐾</h2>
+
+        <p>Temukan dua hewan yang sama yaa sayang 💕</p>
+
+        <div id="memoryBoard" class="memory-board"></div>
+
+        <p id="memoryStatus" class="game-status">
+          Cari semua pasangan yaa cintakuu 💪🏻
+        </p>
+      </div>
+    </section>
+
+    <!-- ==================================================
+     TANGKAP HATI
+================================================== -->
+
+    <section id="catchGame" class="game-screen hidden">
+      <div class="game-box">
+        <div class="mini-game-icon heart-bounce">💗</div>
+
+        <p class="game-step">GAME 3 DARI 3</p>
+
+        <h2>Tangkap Hatiku BABY 💗</h2>
+
+        <p>Tangkap minimal 15 hati dalam 10 detik! 💕</p>
+
+        <div class="score-area">
+          <span>💗</span>
+
+          <strong id="catchScore"> 0 </strong>
+
+          <span>•</span>
+
+          <span>⏱️</span>
+
+          <strong id="catchTimer"> 15 </strong>
+        </div>
+
+        <div id="catchArea" class="catch-area">
+          <div id="startCatchText" class="start-catch-text">
+            Siap-siap sayanggg... 💕
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================
+     HALAMAN KATA-KATA
+================================================== -->
+
+    <section id="wordsPage" class="words-page hidden">
+      <div class="words-background-hearts">
+        <span>💕</span>
+        <span>💗</span>
+        <span>💖</span>
+        <span>💞</span>
+        <span>🌸</span>
+        <span>✨</span>
+      </div>
+
+      <div class="words-container">
+        <!-- BUBU DUDU -->
+
+        <div class="words-character">
+          <div class="character-glow"></div>
+
+          <img
+            src="assets/images/characters/bubu-dudu.png"
+            alt="Bubu dan Dudu"
+          />
+        </div>
+
+        <!-- LABEL -->
+
+        <p class="words-label">💌 UNTUK PACARKUU</p>
+
+        <!-- JUDUL -->
+
+        <h1 class="words-title">
+          Ada sesuatu yang<br />
+          ingin aku sampaikan... 💗
+        </h1>
+
+        <!-- KATA-KATA -->
+
+        <div class="letter-card">
+          <div class="letter-decoration">💕</div>
+
+          <p class="letter-text">Hai, sayangkuu, cintakuu, pacarkuu, babykuu... 🌹</p>
+
+          <p class="letter-text">
+            Kalau sayang udah sampai di sini, berarti baby berhasil melewati semua game yang aku buat 🥳.
+            Hum gampang banget yaa baby gamenya, tapi lucukan sayang game yang aku buat haha.
+            Aku mo buat yang susah takut sayang gabisa selesain 🤭.
+</p>
+
+<p class="letter-text">
+            Seru ga sayang mainnya? 🤩 seru la yakali engga kan cintakuu. Dah tiga aja gamenya baby jangan banyak-banyak ntar keasikan lagi baby tu, kan ini web ultah sayang bukan game huu 😤.
+
+          <p class="letter-text">
+            Sayangkuu cintakuu semoga semua game tadi buat baby happy yaa sayang. Lain kali kita main game bareng yuk baby, pasti sayang mau kan cintakuu, sabar baby nanti kita maen semuanyaaaa 💕.
+          </p>
+
+          <p class="letter-text highlight">
+        aku sayanggg...
+          </p>
+
+          <p class="letter-text big-message">BABYKOO 💗</p>
+
+          <p class="letter-text">
+            Makasih yaa cintakuu udah hadir dalam hidupku, makasih udah jadi pacarkuu yang paling cantik, paling lucu, paling baik, dan paling sayang sama aku 💐. Aku bersyukur bisa punya pacar sebaik dan secantik baby 💕.
+            Makasih udah berbagi cerita, tawa, dan waktu sama aku. Aku sayang banget sama baby, semoga baby juga selalu sayang sama aku yaa 💗.
+
+            Makasih baby udah hadir dalam hidupku, makasih untuk semua
+            cerita, tawa, dan waktu yang udah kita lewati bersama yaa sayang 🪷.
+          </p>
+
+          <p class="letter-text">
+            Semoga di umur sayang yang baru ini, semua hal baik datang pada baby 🌼.
+            Semoga baby selalu bahagia, selalu sehat, selalu dikelilingi orang-orang yang
+            sayang sama baby, dan semoga semua impian sayang perlahan menjadi nyata 🌈.
+            Doa-doa baik selalu bersama baby aamiin ✨.
+</p>
+
+            <p class="letter-text">
+            Babykuu cintakuu, aku mungkin engga selalu bisa kasih sesuatu hal yang spesial, tapi aku akan selalu berusaha memberikan yang terbaik untuk baby 🫂.
+          </p>
+
+          <p class="letter-text">Aku selalu berdoa...</p>
+
+          <p class="letter-text highlight">
+            semoga aku selalu menjadi bagian dari hidup baby, kisah baby, semua tentang baby. 💕
+          </p>
+
+          <div class="letter-ending">Selamat ulang tahun, sayangkuu. 🎂💗</div>
+        </div>
+
+        <!-- PETUNJUK SCROLL -->
+
+        <div class="scroll-hint">↓ masih ada kejutan lainnya baby ↓</div>
+
+        <button id="openMemoriesBtn" class="open-memories-btn">
+          Yuk lihat kenangan kita cintakuu 📒
+         
+        </button>
+      </div>
+    </section>
+
+    <!-- ==========================================
+     HALAMAN 5 KENANGAN
+========================================== -->
+    <section id="memoriesPage" class="memories-page hidden">
+      <div class="memories-background">
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+      </div>
+
+      <div class="memories-container">
+        <div class="memories-header">
+          <p class="memories-label">💗 OUR LITTLE STORY</p>
+
+          <h2>
+            Beberapa momen<br />
+            yang ingin aku simpan...
+          </h2>
+
+          <p class="memories-intro">
+            Setiap momen bersama baby selalu punya cerita yang berbeda. 🌷
+          </p>
+
+          <div class="scroll-memory">
+            <span>↓</span>
+            <small>scroll perlahan yaa sayangkoo...</small>
+          </div>
+        </div>
+
+        <!-- FOTO 1 -->
+        <div class="memory-item">
+          <div class="memory-photo-wrapper">
+            <div class="memory-sparkle">✦</div>
+
+            <img
+              src="assets/images/memories/photo1.jpg"
+              alt="Kenangan kita 1"
+            />
+
+            <div class="memory-heart">♡</div>
+          </div>
+
+          <div class="memory-caption">
+            <span>💕</span>
+            <h3>Awal dari kisah kita 🌼</h3>
+            <p>Ini chatan pertama kita sayang 💌. Kita ketemu di roblox pas baby gabisa manjat tangga teros aku bantuin eh tetap gabisa 🙊 . Engga lama kita ketemu lagi kan sayang di discord 🎮.
+               Baby pasti masih ingat dong pas aku join grup discord, terus baby dm aku hahaha masa cewe chat duluan sih sayang ni 🤭. Tapi aku senang banget pas liat notif baby di dc, aku udah tebak pasti sayang bakal chat kan sayang klepek-klepek ama aku 😏. Di situ kita mulai chatan tiap hari, bercanda tiap waktu sampai kita mulai saling nyaman 👫.
+            </p>
+          </div>
+        </div>
+
+        <!-- FOTO 2 -->
+        <div class="memory-item">
+          <div class="memory-photo-wrapper">
+            <div class="memory-sparkle">✦</div>
+
+            <img
+              src="assets/images/memories/photo2.jpg"
+              alt="Kenangan kita 2"
+            />
+
+            <div class="memory-heart">♡</div>
+          </div>
+
+          <div class="memory-caption">
+            <span>💕</span>
+            <h3>Pap cantik pertama Baby 🌸</h3>
+            <p>
+              Pas baby kirim pap aku kaget ngapa tiba-tiba sayang kirim ke aku 🙀, kirain salah kirim hum rupanya sayang pamer kuku baru yang merah merona 💅. Kataku cantik banget si babyyy hum 🙄, aku suka mata sipit baby, kerasa hanyut di dalam dan terjebak tak bisa ke mana-mana 🫧 . Pasti sayang sengaja kirim pap kan biar aku masuk perangkap baby, tau aku sayang niat baby tu huh 👻. Teros setiap chat aku nungguin pap lagi haha siapa tau ada lagi kan syukur, kalo ga ada ya gapapa sayang 🤭. 
+            </p>
+          </div>
+        </div>
+
+        <!-- FOTO 3 -->
+        <div class="memory-item">
+          <div class="memory-photo-wrapper">
+            <div class="memory-sparkle">✦</div>
+
+            <img
+              src="assets/images/memories/photo3.jpg"
+              alt="Kenangan kita 3"
+            />
+
+            <div class="memory-heart">♡</div>
+          </div>
+
+          <div class="memory-caption">
+            <span>💕</span>
+            <h3>Main roblox kala itu 🎮</h3>
+            <p>Kita selalu main bareng berdua kan cintakoo 💞. Baby ingat ga pas muncak 🗻 kita ambil perlengkapan terus jalan berdua ada mba-mba bilang gini ke baby "itu pacarnya yaa mba?" terus sayang jawab "iyaa itu pacar aku 😽" aku yang dengar sung deg-degan padahal kita lo baru kenal, sayangggg ni 👿. Tapi aku senang banget itu  pas dengar baby ngomong gitu cuma sok cuek aja kan aku cool orangnya sayang 🥶. Ada juga yang kita main map horror baby selalu teriak-teriak hum penakut banget si sayang tu 😨, untung aku pemberani dan dapat diandalkan anjay slebew 🤗. Seru banget yaa sayang kalo diingat, nanti kita muncak ama masuk rumah hantu beneran yaa baby kalo ketemu, semuanyaa pokoknya sayanggko 🫂.</p>
+          </div>
+        </div>
+
+        <!-- FOTO 4 -->
+        <div class="memory-item">
+          <div class="memory-photo-wrapper">
+            <div class="memory-sparkle">✦</div>
+
+            <img
+              src="assets/images/memories/photo4.jpg"
+              alt="Kenangan kita 4"
+            />
+
+            <div class="memory-heart">♡</div>
+          </div>
+
+          <div class="memory-caption">
+            <span>💕</span>
+            <h3>Bentuk cinta kita 💗</h3>
+            <p>
+              Makasih yaa sayang selalu ada buat aku, selalu nemenin aku, selalu dengerin aku, dan selalu bikin aku happy tiap hari 💗. Maafin aku kalo sering bikin baby bete, bikin sayang marah, tapi sayang tambah cantik kalo marah makanya aku sering buat baby marah haha 👽. Gapapa la sayang sebenarnya kan itu hobby baby marah-marah, bete-bete, menangis, iyaa ga baby 😽. Makasih yaa sayang selalu dengerin apa yang aku kasih tau, apa yang aku gasuka baby ga lakuin 🫂. Selama kita pacaran kalo kita berantem paling lama sehari karna kita selalu maaf-maafan, aku salah aku minta maaf begitu juga kalo baby yang salah baby minta maaf 🥺. Sayang selalu cerita kalo lagi bete ke aku, itu aku senang karna tau perasaan baby kenapa, jadi langsung aku jelasin ama bujuk biar baby ga bete lagi 👅. Makasih yaa sayang udah banyak berubah demi aku, semoga kita selalu bisa saling mengerti dan saling melengkapi yaa cintakuu 💕.
+            </p>
+          </div>
+        </div>
+
+        <!-- FOTO 5 -->
+        <div class="memory-item">
+          <div class="memory-photo-wrapper">
+            <div class="memory-sparkle">✦</div>
+
+            <img
+              src="assets/images/memories/photo5.jpg"
+              alt="Kenangan kita 5"
+            />
+
+            <div class="memory-heart">♡</div>
+          </div>
+
+          <div class="memory-caption">
+            <span>💕</span>
+            <h3>Aku dan Baby selamanya 💞</h3>
+            <p>
+              Cinta bukan hanya sekedar ungkapan kata, tapi cinta adalah sebuah tindakan nyata. Aku akan selalu berusaha melengkapi hidup baby, selalu ada buat baby, selalu bikin baby bahagia, dan selalu sayang sama baby 💗. Mungkin ada dimana kita saling tidak mengerti, tidak memahami, rasa bosan, rasa muak, rasa cape begini terus, kalo sayang lagi seperti itu selalu ingat seseru itu kalo kita  lagi bercanda, ketawa-tawa, ga sabar mo cerita hari ini ke pacar baby yang ganteng ini 🥰. Jarak kita emang jauh tapi baby selalu ada dihatiku 🫂. Sayang harus sabar jangan bosan-bosan nunggu aku samperin baby, jarak ini hanya sementara ada waktunya kita bisa bersama setiap saat, melepas rindu yang udah lama kita pendam 💞.
+            </p>
+          </div>
+        </div>
+
+        <div class="memory-ending">
+          <div class="ending-heart">♡</div>
+
+          <h3>
+            Ini hanya sebagian kecil<br />
+            dari cerita kita sayang...
+          </h3>
+
+          <p>Masih ada banyak kenangan lain yang menunggu untuk kita buat. ✨</p>
+
+          <button id="openGalleryBtn" class="open-memories-btn">
+            Yoo lanjut lagi sayangkoo 💗
+            
+          </button>
+
+          <div class="memory-next"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+     HALAMAN 6 - GALLERY & MUSIC
+========================================== -->
+
+    <section id="galleryPage" class="gallery-page hidden">
+      <div class="gallery-background-hearts">
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+      </div>
+
+      <div class="gallery-container">
+        <!-- HEADER -->
+        <div class="gallery-header">
+          <p class="gallery-label">✨ A LITTLE MORE OF US</p>
+
+          <h2>
+            Karena masih banyak<br />
+            cerita yang ingin aku simpan...
+          </h2>
+
+          <p class="gallery-intro">
+            Foto-foto kecil, momen-momen sederhana, dan lagu yang mengingatkanku
+            pada pacarkuu. 💗
+          </p>
+
+          <div class="gallery-scroll-hint">
+            <span>↓</span>
+            <small>scroll perlahan yaa babykuu sayang...</small>
+          </div>
+        </div>
+
+        <!-- =====================================
+             20 FOTO BERGERAK
+        ====================================== -->
+
+        <!-- ==========================================
+     68 PHOTO SNAKE GALLERY
+========================================== -->
+
+        <div class="moving-gallery-section">
+          <div class="moving-gallery-title">
+            <p>A LITTLE MORE OF OUR STORY</p>
+            <h3>Our Little Memories ♡</h3>
+          </div>
+
+          <div class="photo-snake-gallery">
+            <!-- BARIS 1 -->
+            <div class="photo-row row-left">
+              <div class="photo-track" id="photoTrack1"></div>
+            </div>
+
+            <!-- BARIS 2 -->
+            <div class="photo-row row-right">
+              <div class="photo-track" id="photoTrack2"></div>
+            </div>
+          </div>
+
+          <p class="gallery-note">Every picture holds a little piece of us ♡</p>
+        </div>
+      </div>
+
+      <!-- =====================================
+             MUSIC PLAYER
+        ====================================== -->
+
+      <div class="music-section">
+        <div class="music-decoration">♡</div>
+
+        <p class="music-label">🎵 OUR LITTLE PLAYLIST</p>
+
+        <h3>
+          Beberapa lagu<br />
+          yang ingin aku dengar ama baby...
+        </h3>
+
+        <p class="music-intro">Pilih salah satu lagu di bawah ini cintakuu 💗</p>
+
+        <!-- PLAYER -->
+
+        <div class="music-player">
+          <div class="music-disc">
+            <img
+              id="musicCover"
+              src="assets/images/music/cover1.jpg"
+              alt="Foto penyanyi"
+            />
+          </div>
+
+          <div class="music-info">
+            <p id="currentSongNumber">Our Beginning</p>
+
+            <h4 id="currentSongTitle">All of Me</h4>
+
+            <span id="currentSongArtist"> Untuk kamu 💕 </span>
+          </div>
+
+          <div class="music-controls">
+            <button id="prevSongBtn">⏮</button>
+
+            <button id="playSongBtn" class="play-btn">▶</button>
+
+            <button id="nextSongBtn">⏭</button>
+          </div>
+
+          <div class="music-progress">
+            <span id="musicCurrentTime"> 0:00 </span>
+
+            <div class="progress-bar">
+              <div id="musicProgress"></div>
+            </div>
+
+            <span id="musicDuration"> 0:00 </span>
+          </div>
+        </div>
+
+       <!-- DAFTAR LAGU -->
+
+<div class="song-list">
+
+    <button class="song-item active" data-song="0">
+        <span class="song-number">01</span>
+
+        <div>
+            <strong>For You, Always</strong>
+            <small>All of Me · John Legend</small>
+        </div>
+
+        <span>♪</span>
+    </button>
+
+
+    <button class="song-item" data-song="1">
+        <span class="song-number">02</span>
+
+        <div>
+            <strong>Our Little Moments</strong>
+            <small>seasons · wave to earth</small>
+        </div>
+
+        <span>♪</span>
+    </button>
+
+
+    <button class="song-item" data-song="2">
+        <span class="song-number">03</span>
+
+        <div>
+            <strong>Falling for You</strong>
+            <small>Can't Help Falling in Love · Elvis Presley</small>
+        </div>
+
+        <span>♪</span>
+    </button>
+
+
+    <button class="song-item" data-song="3">
+        <span class="song-number">04</span>
+
+        <div>
+            <strong>Just Yours</strong>
+            <small>Aku Milikmu · Dewa 19</small>
+        </div>
+
+        <span>♪</span>
+    </button>
+
+
+    <button class="song-item" data-song="4">
+        <span class="song-number">05</span>
+
+        <div>
+            <strong>Until the End</strong>
+            <small>Last Night on Earth · Green Day</small>
+        </div>
+
+        <span>♪</span>
+    </button>
+
+</div>
+
+        <p class="music-footer">
+          Lagu-lagu ini akan selalu mengingatkanku pada baby, dan aku berharap lagu-lagu ini juga akan selalu mengingatkan baby pada moment-moment indah yang telah kita lewati 🌈
+        </p>
+      </div>
+
+      <!-- ENDING -->
+
+      <!-- ENDING -->
+
+      <div class="gallery-ending">
+        <div class="gallery-ending-heart">💗</div>
+
+        <h3>Aku dan Baby...</h3>
+
+        <p>
+          akan selalu ada untuk satu sama lain, saling melengkapi, saling menguatkan, dan saling menyayangi. Cerita kita akan terus berlanjut sampai mata kita tertutup 💞 
+        </p>
+
+        <div class="ending-stars">✦　♡　✦</div>
+
+        <button id="openFinalBtn" class="final-gallery-btn">
+          Satu kejutan lagi cintakoo 💗
+        </button>
+      </div>
+    </section>
+
+    <!-- ==========================================
+     FINAL SURPRISE
+========================================== -->
+    <section id="finalPage" class="final-page hidden">
+      <div class="final-background-hearts">
+        <span>♡</span>
+        <span>♥</span>
+        <span>♡</span>
+        <span>♥</span>
+        <span>♡</span>
+        <span>♥</span>
+        <span>♡</span>
+      </div>
+
+      <div class="final-content">
+        <p class="final-label">ONE LAST SURPRISE</p>
+
+        <h1>
+          Ada satu hal lagi<br />
+          untuk pacarkuu 💗
+        </h1>
+
+        <p class="final-subtitle">
+          Penasaran yaa baby sama gift-nya 😝
+          <br />
+          Klik hadiahnya sayang kalo penasaran 😍
+        </p>
+
+        <!-- HADIAH -->
+        <button id="giftBoxBtn" class="gift-box-btn">
+          <div class="gift-lid">🎀</div>
+          <div class="gift-body">🎁</div>
+        </button>
+
+        <p class="gift-hint">Tap the gift 👆🏻</p>
+
+        <!-- HASIL HADIAH -->
+        <div id="finalMessage" class="final-message hidden">
+          <div class="confetti">🎉</div>
+
+          <img
+            src="assets/images/characters/mwah.png"
+            alt="Bubu Dudu"
+            class="final-bubu"
+          />
+
+          <p class="final-small-text">HAPPY BIRTHDAY, MY LOVE</p>
+
+          <h2>
+            Selamat ulang tahun,<br />
+            sayangkuu 🎂
+          </h2>
+
+          <p class="final-letter">
+            Makasih yaa sayang udah menjadi bagian paling indah dalam hidupku 🫂 . Semoga rasa sayang kita tidak kan pernah pudar, cinta kita akan selalu seperti ini dan akan terus menjadikan hari-hari kita lebih bewarna 🌈.
+            <br /><br />
+            Sayang sedih aku sedih, sayang bahagia aku bahagia. Aku ingin sayang selalu berbagi cerita baby ke aku, aku ingin baby jadikan aku tempat pulang, tempat sayang bercerita, tempat sayang merasa aman 🥹. Aku mungkin masih banyak kurangnya tapi aku selalu berusaha ngasi hal terbaik yang aku punya untuk babykuu tercinta 💗.
+            <br /><br />
+            Semoga sayang selalu diberikan kesehatan, kedamaian, kebahagian, dan apa yang sayang doakan terwujud satu per satu 🤲🏻.
+            <br /><br />
+            Hadiah kecil ini mungkin tidak seberapa sayang, tapi aku buat dengan hati yang tulus dan aku happy udah buat web ini buat baby 😻. Makasih yaa sayang udah baca semua yang aku tulis, mungkin pemilihan katanya kurang tertata atau kurang rapi, tapi kata-kata yang aku tulis adalah ungkapan isi hatikuu untuk pacarkuu tersayang 💕.
+            <br /><br />
+
+
+            <strong> I love you more than words can say 💗 </strong>
+          </p>
+
+          <div class="final-divider">♡ ───── ♡</div>
+
+          <div class="final-signature">
+
+    <p class="final-ending">
+        This little website was made<br>
+        especially for baby 💕
+    </p>
+
+    <div class="signature-line"></div>
+
+    <div class="signature-sender"> 
+
+    <p class="signature-closing">
+        With love,
+    </p>
+
+    <img
+        src="assets/images/tanda.png"
+        alt="Tanda tangan"
+        class="signature-image"
+    >
+
+    <p class="signature-role">
+        juna
+        pacar erly ♡
+    </p>
+      
+    <p class="signature-date">
+        01 Oktober 2026
+    </p>
+
+</div>
+
+          <button id="restartBirthdayBtn" class="restart-btn">
+            mulai lagi dari awal
+          </button>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- ==========================================
+     KONFIRMASI MULAI DARI AWAL
+     ========================================== -->
+
+<div id="restartConfirmModal" class="restart-modal hidden">
+
+    <div class="restart-modal-overlay"></div>
+
+    <div class="restart-modal-box">
+
+        <div class="restart-modal-heart">
+            💗
+        </div>
+
+        <h3>
+            Yakin mau ngulang semuanya sayang?
+        </h3>
+
+        <p>
+            Semua perjalanan kecil ini akan
+            dimulai lagi dari awal 🥺💕
+        </p>
+
+        <div class="restart-modal-buttons">
+
+            <button
+                id="cancelRestartBtn"
+                class="cancel-restart-btn"
+            >
+                Engga, tetap di sini 🤍
+            </button>
+
+            <button
+                id="confirmRestartBtn"
+                class="confirm-restart-btn"
+            >
+                Iya, mulai lagi 💗
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+    <!-- JAVASCRIPT -->
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
