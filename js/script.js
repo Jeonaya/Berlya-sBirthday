@@ -1541,7 +1541,7 @@ function endCatchGame() {
     // BERHASIL
     // ==========================================
 
-    if (catchScore >= 15) {
+    if (catchScore >= 2) {
         saveProgress("words");
 
         document.getElementById("startCatchText").textContent =
